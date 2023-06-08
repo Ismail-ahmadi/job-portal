@@ -1,0 +1,32 @@
+.container-main {
+  width: 75%;
+  height: auto;
+  /* background-color:aqua; */
+  margin: 0 auto;
+}
+.container-itemJob {
+  width: 75%;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 1rem;
+}
+
+.links ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 1rem 1rem;
+}
+.links ul li a {
+  color: black;
+  text-decoration: none;
+  background-color: aqua;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+}
+.links ul li a:hover {
+  color: beige;
+  background-color: gray;
+}
+

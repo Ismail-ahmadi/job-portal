@@ -1,0 +1,7 @@
+<div class="card-item">
+  <h1>{{ job.name }}</h1>
+  <h4>{{ job.jobCategory }}</h4>
+  <p> {{ job.jobDetails }} <br /> Job Type: {{ job.jobType }} <br /></p>
+  <address>Address : {{ job.location }}</address>
+  <a [routerLink]="['/jobs', job.id]" class="btn"> More Info</a>
+</div>
