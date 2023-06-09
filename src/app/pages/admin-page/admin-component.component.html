@@ -1,1 +1,68 @@
-<p>admin-component works!</p>
+<div class="container mt-4">
+  <!-- <pre> {{ f.value | json }} </pre> -->
+  <ng-container *ngIf="isSubmitted">
+    <div class="alert alert-success" role="alert">
+      Thank you! the job post is submitted!! <br />You can see it in the homepage.
+    </div>
+  </ng-container>
+  <h1 class="mb-4"> Add New Job Post</h1>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="mb-3">
+      <label class="form-label">Job Title Name</label>
+      <input name="name" [ngClass]="{'is-invalid': !name.valid && name.touched}" ngModel #name="ngModel" type="text"
+        required class="form-control" placeholder="Job Title Name">
+      <div *ngIf="!name.valid && name.touched" class="text-danger fs-6 fst-italic">
+        Please provide a valid job title name.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Job Category </label>
+      <select name="jobCategory" [ngClass]="{'is-invalid': !jobCategory.valid && jobCategory.touched}" #jobCategory="ngModel"
+      ngModel required class="form-select">
+      <option selected>Select</option>
+      <option value="frontend">Front End</option>
+      <option value="backend">Back End</option>
+      <option value="fullstack">Full Stack</option>
+      <option value="all">All</option>
+    </select>
+      <div *ngIf="!jobCategory.valid && jobCategory.touched" class="text-danger fs-6 fst-italic">
+        Please provide a valid job Category.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Job Details</label>
+      <input name="jobDetails" [ngClass]="{'is-invalid': !jobDetails.valid && jobDetails.touched}" #jobDetails="ngModel" ngModel type="text"
+        required class="form-control" placeholder="Job Details">
+      <div *ngIf="!jobDetails.valid && jobDetails.touched" class="text-danger fs-6 fst-italic">
+        Please provide job details.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Job Type</label>
+      <input name="jobType" [ngClass]="{'is-invalid': !jobType.valid && jobType.touched}" #jobType="ngModel" ngModel type="text"
+        required class="form-control" placeholder="Job Type">
+      <div *ngIf="!jobType.valid && jobType.touched" class="text-danger fs-6 fst-italic">
+        Please provide a job type e.g: permenant, contract, full-time, ...
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Address</label>
+      <input [ngClass]="{'is-invalid': !address.valid && address.touched}" #address="ngModel" name="address" ngModel
+        type="text" required class="form-control" placeholder="Address">
+      <div *ngIf="!address.valid && address.touched" class="text-danger fs-6 fst-italic">
+        Please provide the full address.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <button [disabled]="!f.valid" type="submit" class="btn mb-3 color-prim">Add New Job Post</button>
+    </div>
+
+    <!-- <pre> {{ f.value | json }}</pre> -->
+
+  </form>
+</div>

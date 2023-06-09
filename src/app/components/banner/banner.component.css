@@ -6,10 +6,8 @@
   /* border: 1px solid red; */
 
 }
-
 .container-banner{
   width: 100%;
-  background-color: red;
   min-height: 50vh;
   max-height: 70vh;
 }

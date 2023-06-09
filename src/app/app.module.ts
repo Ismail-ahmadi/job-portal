@@ -14,6 +14,8 @@ import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { JobDetailsPgaeComponent } from './pages/job-details-pgae/job-details-pgae.component';
+import { FormsModule } from '@angular/forms';
+import { AdminComponentComponent } from './pages/admin-page/admin-component.component';
 
 
 
@@ -29,12 +31,14 @@ import { JobDetailsPgaeComponent } from './pages/job-details-pgae/job-details-pg
     LoginPageComponent,
     NotFoundPageComponent,
     JobDetailsPgaeComponent,
+    AdminComponentComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

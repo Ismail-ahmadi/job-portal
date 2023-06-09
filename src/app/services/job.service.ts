@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Job } from '../model/job.model';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable, map, take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +21,9 @@ export class JobService {
         return resultArr;
       }
     ))
+  }
+  addNewJobPost(job: any) : Observable<any>{
+    return this.http.post(`https://job-portal-e3438-default-rtdb.firebaseio.com/jobs.json`, job)
   }
 }
 
