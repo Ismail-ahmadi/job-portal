@@ -15,8 +15,14 @@
         </li>
         <li class="nav-item" routerLinkActive="active"><a routerLink="/jobs"  class="nav-link">  <fa-icon [icon]="Jobs"></fa-icon> Jobs</a>
         </li>
-        <li class="nav-item" routerLinkActive="active"><a routerLink="/login"  class="nav-link">  <fa-icon [icon]="Login"></fa-icon> Login</a></li>
-        <li class="nav-item" routerLinkActive="active"><a routerLink="/home"  class="nav-link"> Logout <fa-icon [icon]="Logout"></fa-icon> </a></li>
+        <ng-container *ngIf="(currentLoginStatus$ | async) as currentLogin; else loginTemplate">
+          <li (click)="logout()" class="nav-item" routerLinkActive="active"><a routerLink="/home"  class="nav-link"> Logout <fa-icon [icon]="Logout"></fa-icon> </a></li>
+        </ng-container>
+        <ng-template #loginTemplate>
+          <li class="nav-item" routerLinkActive="active"><a routerLink="/login"  class="nav-link">  <fa-icon [icon]="Login"></fa-icon> Login</a></li>
+        </ng-template>
+
+
       </ul>
     </div>
   </div>

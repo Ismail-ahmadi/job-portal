@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  <main class="form-signin m-auto width-50">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <div class="form-floating mb-4">
+        <input [ngClass]="{'is-invalid': isEmailInValid }" formControlName="email" type="email" class="form-control"
+          id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+
+        <div *ngIf="isEmailInValid" class="text-danger fs-6 fst-italic">
+          Please provide a valid email
+        </div>
+      </div>
+
+      <div class="form-floating mb-4">
+        <input [ngClass]="{'is-invalid': isPasswordInValid }" formControlName="password" type="password"
+          class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+        <div *ngIf="isPasswordInValid" class="text-danger fs-6 fst-italic">
+          Please provide a password with more than 6 characters
+        </div>
+      </div>
+      <button [disabled]="loginForm.invalid" class="w-100 btn color-prim" type="submit">Log in</button>
+    </form>
+  </main>
+</div>
