@@ -6,6 +6,9 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
+  pipe() {
+    throw new Error('Method not implemented.');
+  }
   private login = new BehaviorSubject(false);
 
   constructor( private router: Router) { }

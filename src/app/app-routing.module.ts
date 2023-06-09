@@ -7,11 +7,12 @@ import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { JobDetailsPgaeComponent } from './pages/job-details-pgae/job-details-pgae.component';
+import { authGuard } from './function/auth.guard';
 
 const appRountes: Routes = [
   {path:'', redirectTo:'/home', pathMatch: 'full'},
   {path:'home', component: HomeComponentComponent},
-  {path: 'admin', component: AdminComponentComponent},
+  {path: 'admin', component: AdminComponentComponent, canActivate: [authGuard] },
   {path: 'jobs', component: JobsPageComponent},
   {path: 'jobs/:jobId', component: JobDetailsPgaeComponent},
   {path: 'login', component: LoginPageComponent},
