@@ -51,7 +51,7 @@
 
     <div class="mb-3">
       <label class="form-label">Address</label>
-      <input [ngClass]="{'is-invalid': !address.valid && address.touched}" #address="ngModel" name="address" ngModel
+      <input [ngClass]="{'is-invalid': !address.valid && address.touched}" #address="ngModel" name="location" ngModel
         type="text" required class="form-control" placeholder="Address">
       <div *ngIf="!address.valid && address.touched" class="text-danger fs-6 fst-italic">
         Please provide the full address.
