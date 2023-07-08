@@ -1,7 +1,42 @@
-<div class="card-item">
+<!-- <div class="card-item">
+
   <h1>{{ job.name }}</h1>
   <h4>{{ job.jobCategory }}</h4>
   <p> {{ job.jobDetails }} <br /> Job Type: {{ job.jobType }} <br /></p>
   <address>Address : {{ job.location }}</address>
   <a [routerLink]="['/jobs', job.id]" class="btn"> More Info</a>
-</div>
+</div> -->
+
+<section id="section-featurettes" class="featurettes overlay bg-fixed" style="background-image: url(./../../../assets/img/banner.jpg);">
+  <div class="container">
+      <div class="section-content">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="row align-items-center text-white">
+
+                      <div class="col-md-4 offset-md-2 col-sm-6" data-aos="fade-right">
+                          <h4 class="mb-4"> {{ job.name }} </h4>
+                          <p>{{ job.jobDetails }}</p>
+                          <h4>{{ job.jobCategory }}</h4>
+
+                          <address>Address : {{ job.location }}</address>
+
+                          <button type="button" [routerLink]="['/jobs', job.id]" class="btn btn-outline-primary"> More Info</button>
+                          <!-- <button type="button" class="btn btn-outline-primary">FEATURES</button> -->
+                      </div>
+                      <!--/ .col-md-4.col-md-offset-2.col-sm-6 -->
+
+                      <div class="col-md-4 offset-md-right-2 col-sm-6">
+                          <img class="my-5" src="img/app-profile-mockup.png" alt="">
+                      </div>
+                      <!-- / .col-md-4.col-md-offset-right-2.col-sm-6 -->
+
+                  </div><!--/ .featurettes-item -->
+
+              </div><!--/ .col-md-12 -->
+
+          </div><!--/ .row -->
+      </div>
+  </div><!--/ .container -->
+
+</section>

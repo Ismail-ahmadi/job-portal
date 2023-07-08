@@ -1,14 +1,61 @@
 <section *ngIf="(jobs$ | async) as jobs">
-  <div class="container-main">
-    <div class="links">
-      <ul>
-        <li><a >All</a></li>
-        <li><a >Front End</a></li>
-        <li><a >Back End</a></li>
-        <li><a >Full Stack</a></li>
-      </ul>
-    </div>
-  </div>
+  <!-- Features Section-->
+      <div class="section-content center">
+          <!-- Section Title -->
+          <div class="title-wrap mb-5">
+              <h2 class="section-title">
+                  A Job Portal Platform by <a href="https://www.ismailahmadi.com" target="_blank">ismailahmadi.com</a>
+              </h2>
+              <p class="section-sub-title">Job categories in Technologies sectors for the job seeker! Please slect certain category or all for all job posts..</p>
+          </div>
+          <!-- End of Section Title -->
+          <div class="row">
+              <!-- Features Holder-->
+              <div class="col-md-10 offset-md-1 features-holder">
+                  <div class="row">
+                      <!-- Features Item -->
+                      <div class="col-md-6 col-sm-12 text-center mt-4">
+                          <div class="shadow rounded feature-item p-4 mb-4">
+                              <div class="my-4">
+                                  <i class="lnr lnr-cog fs-40"></i>
+                              </div>
+                              <h4>Front End</h4>
+                              <p>HTML5, CSS3, SASS/LESS, JavaScript, jQuery, React JS, Angular JS, ...</p>
+                          </div>
+                          <div class="shadow rounded feature-item p-4 mb-4" >
+                              <div class="my-4">
+                                  <i class="lnr lnr-frame-contract fs-40"></i>
+                              </div>
+                              <h4>Back End</h4>
+                              <p>Server-side programming such as PHP, Python, C#, .NET, Java, SQL, NoSQL, .</p>
+                          </div>
+                      </div>
+                      <!-- End of Feature Item -->
+                      <!-- Features Item -->
+                      <div class="col-md-6 col-sm-12 text-center">
+                          <div class="shadow rounded feature-item p-4 mb-4" >
+                              <div class="my-4">
+                                  <i class="lnr lnr-bubble fs-40"></i>
+                              </div>
+                              <h4>Full Stack</h4>
+                              <p>Technologies stacks from Both Front End and Back End, such as .NET Full Stack, MEAN Full Stack, MERN Full Stack, LAMP Stack,  </p>
+                          </div>
+                          <div class="shadow rounded feature-item p-4 mb-4" >
+                              <div class="my-4">
+                                  <i class="lnr lnr-magic-wand fs-40"></i>
+                              </div>
+                              <h4>ALL</h4>
+                              <p>Fornt End, Back End, Database, UI Design, ...</p>
+                          </div>
+                      </div>
+                      <!-- End of Feature Item -->
+
+                  </div>
+              </div>
+              <!-- End of Features Holder-->
+          </div>
+   </div>
+<!-- End of Features Section-->
   <div class="container-itemJob" >
     <ng-container *ngFor="let itemJob of jobs">
       <app-cards [job]="itemJob"></app-cards>

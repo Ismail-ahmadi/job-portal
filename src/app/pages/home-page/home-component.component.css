@@ -1,7 +1,7 @@
 .container-main {
   width: 75%;
   height: auto;
-  /* background-color:red; */
+  background-color:blue;
   margin: 0 auto;
 }
 .container-itemJob {
@@ -29,4 +29,14 @@
   color: beige;
   background-color: gray;
 }
+.feature-item {
+  transition: all .2s ease-in-out 0s !important; }
+  .feature-item:hover {
+    transform: translateY(-13px); }
 
+.progress-bar {
+  background-color: #ff00cc; }
+
+.container-itemJob{
+  background-color: red;
+}
