@@ -1,3 +1,6 @@
+.navbar{
+  background-color: var(--bg-color);
+}
 a:hover {
   color: var(--primary-color);
 }

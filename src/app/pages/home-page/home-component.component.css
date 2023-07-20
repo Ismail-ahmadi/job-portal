@@ -2,10 +2,10 @@
   width: 75%;
   height: auto;
   background-color:blue;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .container-itemJob {
-  width: 75%;
+  width: 90%;
   height: auto;
   margin: 0 auto 1rem auto;
   display: grid;
@@ -37,9 +37,6 @@
 .progress-bar {
   background-color: #ff00cc; }
 
-.container-itemJob{
-  background-color: red;
-}
 .triangle {
   position: absolute; }
 
@@ -78,3 +75,22 @@
     height: 45px;
     transform: rotate(-40deg); }
 
+.section-content{
+  /* background-color: red; */
+  margin-top: 1rem;
+}
+@media screen and (max-width:1280px){
+  .container-itemJob {
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+@media screen and (max-width:768px){
+  .container-itemJob {
+    grid-template-columns: 1fr ;
+  }
+}
+@media screen and (max-width:400px){
+  .container-itemJob {
+    grid-template-columns: 1fr ;
+  }
+}

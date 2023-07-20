@@ -8,9 +8,11 @@ body {
   font-family: 'Play', sans-serif;
 }
 :root {
-  --primary-color: #ff00cc;
+  --primary-color: #1779ff;
   --secondary-color: #333399;
-  --variant-color: #8E2DE2;
+  /* --variant-color: #8E2DE2; */
+  --variant-color: #21095f;
+  --bg-color:#0c002b;
 
   --white: #fff;
 }

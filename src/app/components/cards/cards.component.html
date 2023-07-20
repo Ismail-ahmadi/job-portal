@@ -1,13 +1,30 @@
-<!-- <div class="card-item">
+<div class="card-item">
 
-  <h1>{{ job.name }}</h1>
+  <!-- <h1>{{ job.name }}</h1>
   <h4>{{ job.jobCategory }}</h4>
   <p> {{ job.jobDetails }} <br /> Job Type: {{ job.jobType }} <br /></p>
   <address>Address : {{ job.location }}</address>
   <a [routerLink]="['/jobs', job.id]" class="btn"> More Info</a>
-</div> -->
+   -->
+   <div class="container-card">
+    <div class="card">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="content">
+            <h2 class="uno"> {{ job.jobCategory }}</h2>
+            <h3 class="html">{{ job.name }}</h3>
+            <p>{{ job.jobDetails }} <br /> Job Type: {{ job.jobType }} <br /> <br/> <fa-icon [icon]="Location"></fa-icon> {{ job.location}}</p>
 
-<section id="section-featurettes" class="featurettes overlay bg-fixed" style="background-image: url(./../../../assets/img/banner.jpg);">
+            <a [routerLink]="['/jobs', job.id]" >More Info</a>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- <section id="section-featurettes" class="featurettes overlay bg-fixed" style="background-image: url(./../../../assets/img/banner.jpg);">
   <div class="container">
       <div class="section-content">
           <div class="row">
@@ -22,21 +39,21 @@
                           <address>Address : {{ job.location }}</address>
 
                           <button type="button" [routerLink]="['/jobs', job.id]" class="btn btn-outline-primary"> More Info</button>
-                          <!-- <button type="button" class="btn btn-outline-primary">FEATURES</button> -->
-                      </div>
+                           <button type="button" class="btn btn-outline-primary">FEATURES</button> -->
+                      <!-- </div> -->
                       <!--/ .col-md-4.col-md-offset-2.col-sm-6 -->
 
-                      <div class="col-md-4 offset-md-right-2 col-sm-6">
+                      <!-- <div class="col-md-4 offset-md-right-2 col-sm-6">
                           <img class="my-5" src="img/app-profile-mockup.png" alt="">
-                      </div>
+                      </div> -->
                       <!-- / .col-md-4.col-md-offset-right-2.col-sm-6 -->
 
-                  </div><!--/ .featurettes-item -->
+                  <!-- </div>/ .featurettes-item -->
 
-              </div><!--/ .col-md-12 -->
+              <!-- </div>/ .col-md-12 -->
 
-          </div><!--/ .row -->
-      </div>
-  </div><!--/ .container -->
+          <!-- </div>/ .row -->
+      <!-- </div> -->
+  <!-- </div>/ .container -->
 
-</section>
+<!-- </section> -->

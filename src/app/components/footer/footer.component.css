@@ -1,10 +1,60 @@
 footer {
   width: 100%;
-  background-color: #202529;
-  height: 10rem;
+  background-color: var(--bg-color);
+  height: auto;
 }
 h1, p {
   text-align: center;
   padding: 1rem 0 0 0;
-  color: aliceblue;
+  color: var(--white);
+}
+h5, h6, hr {
+  color: var(--white);
+}
+a{
+  color: var(--primary-color);
+}
+a:hover {
+  color: var(--white);
+}
+.btn-outline-color{
+  border-color: var(--primary-color);
+}
+.btn-outline-color:hover{
+  background-color: var(--primary-color);
+}
+.hover-effect1 {
+  min-height: 20px;
+  text-align: center;
+}
+.hover-effect1 ul {
+ padding-top: 1px;
+}
+.hover-effect1 ul li {
+ display: inline-block;
+}
+.hover-effect1 ul li a {
+ font-size: 30px;
+ text-align: center;
+ color: #fff;
+ margin: 0px 10px;
+ line-height: 50px;
+ display: inline-block;
+ width: 50px;
+ height: 50px;
+ background:var(--primary-color);
+ -webkit-transition: all .6s ease;
+ -moz-transition: all .6s ease;
+ -ms-transition: all .6s ease;
+ -o-transition: all .6s ease;
+ transition: all .6s ease;
+}
+.hover-effect1 ul li:hover a {
+  border-radius: 50%;
+  background: var(--primary-color);
+ -moz-transform: rotate(360deg);
+ -webkit-transform: rotate(360deg);
+ -o-transform: rotate(360deg);
+ -ms-transform: rotate(360deg);
+ transform: rotate(360deg);
 }

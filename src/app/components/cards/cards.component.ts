@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Job } from 'src/app/model/job.model';
+import { faLocation  } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-cards',
@@ -8,5 +10,6 @@ import { Job } from 'src/app/model/job.model';
 })
 export class CardsComponent {
   @Input() job! : Job;
+  Location = faLocation;
 
 }

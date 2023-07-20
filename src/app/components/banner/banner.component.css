@@ -3,3 +3,9 @@
   min-height: 50vh;
   /* max-height: 70vh; */
 }
+/* ============== Media Query (Small Devices)=============== */
+@media screen and (max-width:600px){
+  h1{
+    font-size: 4rem;
+  }
+}
