@@ -20,7 +20,7 @@ export class LoginPageComponent implements OnInit {
     })
     this.loginService.currentLoginStatus$.pipe(
       filter(status => !!status),
-      tap(() => this.router.navigateByUrl('/'))
+      tap(() => this.router.navigateByUrl('/admin'))
     ).subscribe();
   }
   get userEmail() {

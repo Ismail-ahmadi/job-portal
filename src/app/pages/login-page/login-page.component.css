@@ -3,5 +3,5 @@
   min-height: 20rem;
 }
 .color-prim{
-  background-color: #27fefe ;
+  background-color: var(--primary-color) ;
 }

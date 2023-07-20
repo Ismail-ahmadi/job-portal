@@ -1,1 +1,9 @@
-<p>jobs-page works!</p>
+<section *ngIf="(jobs1$ | async) as jobs1">
+
+<div class="container-itemJob" >
+
+  <ng-container *ngFor="let itemJob of jobs1">
+    <app-cards [job]="itemJob"></app-cards>
+  </ng-container>
+</div>
+</section>
